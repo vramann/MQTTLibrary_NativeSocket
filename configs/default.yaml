@@ -1,0 +1,31 @@
+broker:
+  host: localhost
+  port: 1883
+
+client_id: native-socket-client
+mqtt_version: 4
+clean_session: true
+keepalive: 60
+
+connect_timeout_ms: 10000
+
+reconnect:
+  enabled: true
+  max_retries: 0
+  initial_delay_ms: 1000
+  max_delay_ms: 60000
+  backoff_multiplier: 2.0
+
+publisher:
+  default_topic: "mqtt/test"
+  default_qos: 0
+  queue_depth: 1000
+
+subscribers:
+  - topics:
+      - "mqtt/#"
+      - "vehicle/+/status"
+    qos: 0
+
+logging:
+  level: info

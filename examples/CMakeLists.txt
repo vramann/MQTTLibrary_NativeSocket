@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.22)
+
+add_executable(single_publisher single_publisher/main.cpp)
+target_link_libraries(single_publisher PRIVATE mqtt_native_socket)
+target_compile_features(single_publisher PRIVATE cxx_std_20)
+
+add_executable(single_subscriber single_subscriber/main.cpp)
+target_link_libraries(single_subscriber PRIVATE mqtt_native_socket)
+target_compile_features(single_subscriber PRIVATE cxx_std_20)
