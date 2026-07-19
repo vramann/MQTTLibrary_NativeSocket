@@ -22,6 +22,14 @@ are often wrong (see the gotchas list in pi5-architecture-notes.md).
   python-can: https://python-can.readthedocs.io/
 - **ISO-TP / UDS**: kernel CAN_ISOTP docs; ISO 14229 overview articles
   (ties into your UDS client project)
+- **Wi-Fi / NetworkManager**: `man nmcli` and
+  https://networkmanager.dev/docs/ ; Pi networking docs on raspberrypi.com
+- **Bluetooth / BlueZ**: https://www.bluez.org/ (D-Bus API docs live in the
+  bluez source tree under `doc/`); `bleak` (Python BLE):
+  https://bleak.readthedocs.io/ ; debug with `btmon`
+- **Cellular / ModemManager**: https://modemmanager.org/ (`mmcli` docs);
+  your modem vendor's AT command manual (SIMCom/Quectel PDFs) is the ground
+  truth for Part C of Phase 7
 - **libcamera / rpicam-apps**: https://www.raspberrypi.com/documentation/computers/camera_software.html
 - **picamera2 manual**: https://datasheets.raspberrypi.com/camera/picamera2-manual.pdf
 - **Hailo on Pi 5**: https://github.com/hailo-ai/hailo-rpi5-examples and the
@@ -34,4 +42,4 @@ are often wrong (see the gotchas list in pi5-architecture-notes.md).
 - *The Linux Programming Interface* — Kerrisk (the C/syscall bible; use as reference)
 - *Exploring Raspberry Pi* — Molloy (older Pis, but the Linux-interfacing
   chapters age well — cross-check pin/chip specifics against Pi 5 docs)
-- *Linux Device Drivers* (LDD3, free online) + modern supplements for Phase 10
+- *Linux Device Drivers* (LDD3, free online) + modern supplements for Phase 11

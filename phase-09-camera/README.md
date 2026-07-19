@@ -1,4 +1,4 @@
-# Phase 08 — Camera (libcamera stack)
+# Phase 09 — Camera (libcamera stack)
 
 **Goal:** capture stills and video on the Pi 5 with the modern libcamera
 stack — CLI first, then Python (`picamera2`) for productivity, then a look at

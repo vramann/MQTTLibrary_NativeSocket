@@ -1,4 +1,4 @@
-# Phase 07 — CAN Bus with SocketCAN
+# Phase 08 — CAN Bus with SocketCAN
 
 **Goal:** bring up your CAN HAT on the Pi 5, get fluent with SocketCAN in C
 and the can-utils/python-can tooling, and climb the stack to ISO-TP — the

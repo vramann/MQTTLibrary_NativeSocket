@@ -14,9 +14,13 @@ ending in a capstone that integrates everything.
 | Raspberry Pi 5 (4/8 GB), 27 W USB-C PSU, SD card / NVMe | Phase 0 |
 | Basic GPIO kit (LEDs, buttons, breadboard, resistors) | Phase 3 |
 | I2C/SPI sensors (e.g. BME280, MPU6050, MCP3008, small display) | Phase 4–5 |
-| CAN HAT (MCP2515 or MCP2518FD based) | Phase 7 |
-| Camera Module 3 | Phase 8 |
-| AI HAT / AI Kit (Hailo-8 / Hailo-8L) | Phase 9 |
+| Cellular/GSM modem (SIM7600/A7670 HAT or USB LTE dongle) + data SIM | Phase 7 (Part C) |
+| CAN HAT (MCP2515 or MCP2518FD based) | Phase 8 |
+| Camera Module 3 | Phase 9 |
+| AI HAT / AI Kit (Hailo-8 / Hailo-8L) | Phase 10 |
+
+Wi-Fi and Bluetooth/BLE (Phase 7 Parts A and B) use the Pi 5's onboard radio —
+no extra hardware needed.
 
 ## Phase map
 
@@ -29,15 +33,17 @@ ending in a capstone that integrates everything.
 | [04](phase-04-bus-protocols/) | UART, I2C, SPI | Talk to real sensors from C (ioctl-level) and Python |
 | [05](phase-05-advanced-io-timing/) | PWM, timing, real-time | Hardware PWM, servos, ADC, latency measurement, PREEMPT_RT basics |
 | [06](phase-06-networking-mqtt/) | Networking & MQTT | Sockets in C, mosquitto, port/reuse of your own MQTT library on the Pi |
-| [07](phase-07-can-bus/) | CAN bus | SocketCAN in C, can-utils, python-can, ISO-TP and a taste of UDS |
-| [08](phase-08-camera/) | Camera | rpicam-apps, libcamera C++, picamera2, OpenCV capture pipeline |
-| [09](phase-09-ai-hat/) | AI HAT (Hailo) | On-device inference: detection/pose pipelines, custom model flow |
-| [10](phase-10-kernel-devicetree/) | Kernel & device tree | Write a device tree overlay and a small kernel module |
-| [11](phase-11-capstone/) | Capstone | CAN + camera + AI + MQTT integrated "vehicle gateway" project |
+| [07](phase-07-wireless/) | Wireless: Wi-Fi, BT/BLE, cellular | nmcli/AP mode, BlueZ + GATT, ModemManager/AT, uplink failover supervisor |
+| [08](phase-08-can-bus/) | CAN bus | SocketCAN in C, can-utils, python-can, ISO-TP and a taste of UDS |
+| [09](phase-09-camera/) | Camera | rpicam-apps, libcamera C++, picamera2, OpenCV capture pipeline |
+| [10](phase-10-ai-hat/) | AI HAT (Hailo) | On-device inference: detection/pose pipelines, custom model flow |
+| [11](phase-11-kernel-devicetree/) | Kernel & device tree | Write a device tree overlay and a small kernel module |
+| [12](phase-12-capstone/) | Capstone | CAN + camera + AI + wireless uplink + MQTT "vehicle gateway" project |
 
-Dependency-wise: 0 → 1 → 2 → 3 → 4 are sequential. After 4, phases 5–9 can be
-reordered to match hardware availability. Phase 10 is optional-but-recommended
-before the capstone. Track your progress in [PROGRESS.md](PROGRESS.md).
+Dependency-wise: 0 → 1 → 2 → 3 → 4 are sequential. After 4, phases 5–10 can be
+reordered to match hardware availability (Phase 7's cellular part can wait for
+the modem; its Wi-Fi/BT parts need no extra hardware). Phase 11 is
+optional-but-recommended before the capstone. Track your progress in [PROGRESS.md](PROGRESS.md).
 
 ## How to use this repo as a course
 

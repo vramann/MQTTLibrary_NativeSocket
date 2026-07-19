@@ -1,4 +1,4 @@
-# Phase 11 — Capstone: Vehicle Gateway
+# Phase 12 — Capstone: Vehicle Gateway
 
 **Goal:** one system that exercises every phase — a "vehicle gateway" that
 bridges CAN telemetry, camera + AI perception, and MQTT reporting, built
@@ -15,9 +15,9 @@ with your own MQTT library at the center. Scope it to 2–4 weekends.
 
 - **CAN side**: real sensors on your HAT bus, or replay a recorded/candump
   log onto `vcan0` — decode selected IDs (DBC via generated C code from
-  Phase 7 stretch) into signals.
+  Phase 8 stretch) into signals.
 - **Perception side**: Hailo detection events (person/vehicle) from the
-  Phase 9 pipeline arriving as JSON over a local Unix socket.
+  Phase 10 pipeline arriving as JSON over a local Unix socket.
 - **Gateway daemon (the core deliverable, in C)**: single epoll loop owning
   the CAN socket, the Unix socket from the perception process, a timerfd for
   periodic stats, and your MQTT connection. Publishes decoded signals,
@@ -26,6 +26,10 @@ with your own MQTT library at the center. Scope it to 2–4 weekends.
 - **Diagnostics twist (optional, ties to your UDS project)**: expose a UDS
   server-ish endpoint on ISO-TP — respond to ReadDataByIdentifier with live
   gateway stats — or plug in your actual UDS client work against an ECU sim.
+- **Uplink (Phase 7 skills)**: the gateway must not care which link carries
+  MQTT — run your Phase 7 connectivity supervisor underneath (Ethernet/Wi-Fi
+  preferred, cellular failover) and publish uplink state as part of health.
+  Optional: SMS "STATUS" command path as an out-of-band diagnostic.
 - **Dashboard**: anything subscribing to the broker — Grafana + a bridge,
   Node-RED, or a simple web page; keep this part cheap.
 

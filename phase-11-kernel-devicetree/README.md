@@ -1,4 +1,4 @@
-# Phase 10 — Kernel Modules & Device Tree Overlays
+# Phase 11 — Kernel Modules & Device Tree Overlays
 
 **Goal:** cross the userspace/kernel boundary you've been leaning on all
 course: write a device tree overlay from scratch and a small kernel module,
@@ -19,7 +19,7 @@ so drivers stop being magic. Optional-but-recommended before the capstone.
 ## Tasks
 1. **Read before writing**: decompile an existing overlay
    (`dtc -I dtb -O dts /boot/firmware/overlays/mcp2515-can0.dtbo`) — you used
-   this exact overlay in Phase 7; now read what it actually declares
+   this exact overlay in Phase 8; now read what it actually declares
    (SPI node, oscillator clock, interrupt GPIO, `compatible = "microchip,mcp2515"`).
 2. **Write an overlay**: create a `.dts` that declares a device on a GPIO —
    e.g. a `gpio-leds` node for your breadboard LED (heartbeat trigger!) or a

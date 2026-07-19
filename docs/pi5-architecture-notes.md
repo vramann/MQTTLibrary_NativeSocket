@@ -61,7 +61,7 @@ On a microcontroller you own the hardware; on the Pi you **ask the kernel**
 for hardware. Every peripheral in this course follows the same pattern:
 
 1. A **device tree** node/overlay tells the kernel the hardware exists
-   (Phase 10 demystifies this).
+   (Phase 11 demystifies this).
 2. A **kernel driver** binds to it and exposes a **/dev node or sysfs
    interface** (`/dev/gpiochip0`, `/dev/i2c-1`, `/dev/spidev0.0`,
    `/dev/ttyAMA*`, `can0`, `/dev/video*`).

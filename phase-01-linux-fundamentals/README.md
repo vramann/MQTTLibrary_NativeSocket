@@ -2,7 +2,7 @@
 
 **Goal:** fluency with the Linux mechanisms every later phase relies on:
 processes, permissions, systemd, /sys and /proc, udev, and the device tree
-*as a user* (writing overlays comes in Phase 10).
+*as a user* (writing overlays comes in Phase 11).
 
 ## Concepts
 - Everything is a file: `/dev`, `/sys`, `/proc` and how kernel drivers expose

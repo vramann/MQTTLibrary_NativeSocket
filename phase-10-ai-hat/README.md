@@ -1,10 +1,10 @@
-# Phase 09 — AI HAT (Hailo) Inference
+# Phase 10 — AI HAT (Hailo) Inference
 
 **Goal:** run real-time vision inference on the AI HAT/AI Kit (Hailo-8 = 26
 TOPS on AI HAT+; Hailo-8L = 13 TOPS on the original AI Kit), understand the
 compile-deploy model flow, and wire detections into your event/MQTT system.
 
-**Prereq:** Phase 8 (camera pipeline). The HAT sits on the PCIe FPC connector
+**Prereq:** Phase 9 (camera pipeline). The HAT sits on the PCIe FPC connector
 — seat the cable carefully, use the thermal pad/standoffs per the guide.
 
 ## Concepts
