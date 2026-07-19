@@ -29,8 +29,10 @@ the phase where MCU intuition meets Linux reality.
 5. **GPIO-to-GPIO round trip**: output edge wired to input line; measure
    userspace event round-trip time distribution. Compare against your MCU
    expectations and explain every order of magnitude.
-6. **1-Wire detour** (if you have a DS18B20): `dtoverlay=w1-gpio`, read via
-   `/sys/bus/w1/` — a nice example of a kernel driver doing protocol work.
+6. **1-Wire timing angle** (DS18B20 from Phase 4 task 8): re-visit it as a
+   *timing* case study — the kernel driver bit-bangs microsecond-precise
+   slots for you; skim the w1-gpio driver source and relate it to this
+   phase's jitter measurements.
 
 ## Stretch
 - Read the RP1 datasheet's PWM chapter; map sysfs channels to RP1 blocks.

@@ -17,6 +17,10 @@ are often wrong (see the gotchas list in pi5-architecture-notes.md).
 - **gpiozero**: https://gpiozero.readthedocs.io/
 - **I2C/SPI kernel interfaces**: kernel docs `Documentation/i2c/dev-interface`
   and `Documentation/spi/spidev` (https://docs.kernel.org/)
+- **Modbus**: spec + implementation guides at https://modbus.org/ ;
+  `mbpoll` CLI; `pymodbus` docs for the Python peer
+- **USB/evdev**: kernel input docs (https://docs.kernel.org/input/) ;
+  `lsusb`, `evtest` for exploration
 - **SocketCAN**: https://docs.kernel.org/networking/can.html ;
   can-utils: https://github.com/linux-can/can-utils ;
   python-can: https://python-can.readthedocs.io/

@@ -14,6 +14,7 @@ ending in a capstone that integrates everything.
 | Raspberry Pi 5 (4/8 GB), 27 W USB-C PSU, SD card / NVMe | Phase 0 |
 | Basic GPIO kit (LEDs, buttons, breadboard, resistors) | Phase 3 |
 | I2C/SPI sensors (e.g. BME280, MPU6050, MCP3008, small display) | Phase 4–5 |
+| Optional comms extras: RS-485 transceiver/dongle, DS18B20 (1-Wire), I2S mic | Phase 4 |
 | Cellular/GSM modem (SIM7600/A7670 HAT or USB LTE dongle) + data SIM | Phase 7 (Part C) |
 | CAN HAT (MCP2515 or MCP2518FD based) | Phase 8 |
 | Camera Module 3 | Phase 9 |
@@ -30,7 +31,7 @@ no extra hardware needed.
 | [01](phase-01-linux-fundamentals/) | Linux for embedded work | Fluent with systemd, /sys, /proc, udev, device tree, permissions |
 | [02](phase-02-build-toolchain/) | C/C++ toolchain on & for the Pi | Native + cross-compile workflow with CMake, gdb remote debugging |
 | [03](phase-03-gpio/) | GPIO | Digital I/O in C (libgpiod v2), edge events, then gpiozero in Python |
-| [04](phase-04-bus-protocols/) | UART, I2C, SPI | Talk to real sensors from C (ioctl-level) and Python |
+| [04](phase-04-bus-protocols/) | UART, I2C, SPI + other links | Real sensors from C (ioctl-level) and Python; RS-485/Modbus, 1-Wire, I2S, USB; bus-selection judgment |
 | [05](phase-05-advanced-io-timing/) | PWM, timing, real-time | Hardware PWM, servos, ADC, latency measurement, PREEMPT_RT basics |
 | [06](phase-06-networking-mqtt/) | Networking & MQTT | Sockets in C, mosquitto, port/reuse of your own MQTT library on the Pi |
 | [07](phase-07-wireless/) | Wireless: Wi-Fi, BT/BLE, cellular | nmcli/AP mode, BlueZ + GATT, ModemManager/AT, uplink failover supervisor |
