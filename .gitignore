@@ -1,0 +1,14 @@
+# build outputs
+*.o
+*.so
+*.a
+build/
+# phase binaries
+phase-*/code/blink
+# python
+__pycache__/
+*.pyc
+.venv/
+# editor
+.vscode/
+*.swp
