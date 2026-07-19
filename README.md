@@ -7,6 +7,10 @@ ending in a capstone that integrates everything.
 **Learner profile:** experienced embedded C developer, new to the Pi 5 platform.
 **Language order:** C/C++ first, then Python and shell where they earn their place.
 
+**Start here:** [PREREQUISITES.md](PREREQUISITES.md) — what must be on your
+desk (and installed, and known) before Phase 00, plus a just-in-time shopping
+table so you only buy each phase's hardware when you need it.
+
 ## Hardware covered
 
 | Item | Used from phase |
@@ -48,13 +52,15 @@ optional-but-recommended before the capstone. Track your progress in [PROGRESS.m
 
 ## How to use this repo as a course
 
-1. Work through one phase at a time; each phase README has **Concepts → Tasks →
+1. Check [PREREQUISITES.md](PREREQUISITES.md) and order the next phase's
+   hardware one phase ahead.
+2. Work through one phase at a time; each phase README has **Concepts → Tasks →
    Checkpoint → References**.
-2. Commit your solution code into the phase's `code/` directory (phase 03 ships
+3. Commit your solution code into the phase's `code/` directory (phase 03 ships
    a starter example showing the expected layout: C source + Makefile).
-3. Don't skip checkpoints — they are the questions a tutor would ask before
+4. Don't skip checkpoints — they are the questions a tutor would ask before
    letting you move on. Bring answers/doubts back to your tutoring sessions.
-4. Python and shell tasks intentionally come *after* the C tasks in each phase:
+5. Python and shell tasks intentionally come *after* the C tasks in each phase:
    first understand the kernel interface, then appreciate the convenience layer.
 
 ## Background docs
